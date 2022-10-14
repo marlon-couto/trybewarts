@@ -22,3 +22,18 @@ main {
 #trybewarts-forms-logo {
   height: 500px;
 }
+
+#name-container , #house-container {
+  display: flex;
+}
+
+hr {
+  border: 1px solid black;
+  width: 95%;
+  text-align: center;
+}
+
+#family {
+  display: flex;
+  flex-direction: column;
+}

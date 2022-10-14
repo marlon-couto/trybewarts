@@ -34,37 +34,63 @@
     </header>
     <main>
       <form action="" id="evaluation-form">
-        <label for="input-name">
-          <input
-            type="text"
-            name="input-name"
-            id="input-name"
-            placeholder="Nome"
-          />
-        </label>
-        <label for="input-lastname">
-          <input
-            type="text"
-            name="input-lastname"
-            id="input-lastname"
-            placeholder="Sobrenome"
-          />
-        </label>
-        <label for="input-name">
-          <input
-            type="email"
-            name="input-email"
-            id="input-email"
-            placeholder="Email"
-          />
-        </label>
-        <label for="house">
-          <select name="house" id="house">
-            <option id="gitnoria-house" value="Gitnória">Gitnória</option>
-            <option id="reactpuff-house" value="Reactpuff">Reactpuff</option>
-            <option id="corvinode-house" value="Corvinode">Corvinode</option>
-            <option id="pytherina-house" value="Pytherina">Pytherina</option>
-          </select>
+        <div id="name-container">
+          <label for="input-name">
+            <input
+              type="text"
+              name="input-name"
+              id="input-name"
+              placeholder="Nome"
+            />
+          </label>
+          <label for="input-lastname">
+            <input
+              type="text"
+              name="input-lastname"
+              id="input-lastname"
+              placeholder="Sobrenome"
+            />
+          </label>
+        </div>
+        <div id="house-container">
+          <label for="input-email">
+            <input
+              type="email"
+              name="input-email"
+              id="input-email"
+              placeholder="Email"
+            />
+          </label>
+          <label for="house">
+            <select name="house" id="house">
+              <option id="gitnoria-house" value="Gitnória">Gitnória</option>
+              <option id="reactpuff-house" value="Reactpuff">Reactpuff</option>
+              <option id="corvinode-house" value="Corvinode">Corvinode</option>
+              <option id="pytherina-house" value="Pytherina">Pytherina</option>
+            </select>
+          </label>
+        </div>
+        <hr />
+        <label for="family" id="label-family">Qual sua família?</label>
+          <div id="family">
+            <label for="family-frontend">
+              <input
+                type="radio"
+                name="family"
+                id="family-frontend"
+                value="Frontend"
+              />
+              Família Frontend
+            </label>
+            <label for="family-backend">
+              <input type="radio" name="family" id="family-backend" value="Backend"/>
+              Família Backend
+            </label>
+            <label for="family-fullstack">
+              <input type="radio" name="family" id="family-fullstack"
+              value="FullStack"/>
+              Família FullStack
+          </div>
         </label>
       </form>
       <img
