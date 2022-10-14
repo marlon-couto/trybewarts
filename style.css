@@ -23,6 +23,10 @@ main {
   height: 500px;
 }
 
+#section-left {
+  display: inline;
+}
+
 #name-container , #house-container {
   display: flex;
 }
@@ -36,4 +40,9 @@ hr {
 #family {
   display: flex;
   flex-direction: column;
+}
+
+#subject-content {
+  display: flex;
+  flex-wrap: wrap;
 }
