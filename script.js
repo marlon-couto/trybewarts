@@ -1,5 +1,7 @@
 const buttonSubmit = document.querySelector('#button-submit');
 const sendButton = document.querySelector('#submit-btn');
+const agreementButton = document.querySelector('#agreement');
+const textarea = document.querySelector('textarea');
 
 buttonSubmit.addEventListener('click', () => {
   const formName = document.querySelector('#email').value;
@@ -10,8 +12,6 @@ buttonSubmit.addEventListener('click', () => {
     alert('Email ou senha inválidos.');
   }
 });
-
-const agreementButton = document.querySelector('#agreement');
 
 const disableButton = () => {
   if (agreementButton.checked === false) {
@@ -27,6 +27,14 @@ agreementButton.addEventListener('change', () => {
   }
 });
 
+const characterCount = () => {
+  const current = document.querySelector('#current');
+  current.innerText = 500 - textarea.value.length;
+};
+
+textarea.addEventListener('input', characterCount);
+
 window.onload = () => {
   disableButton();
+  characterCount();
 };
