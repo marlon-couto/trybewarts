@@ -21,6 +21,7 @@ main {
 
 #trybewarts-forms-logo {
   height: 500px;
+  order: 1;
 }
 
 #section-left {
@@ -55,4 +56,8 @@ hr {
   color: grey;
   text-align: right;
   width: 50%;
+}
+
+#form-data {
+  width: 45%;
 }
