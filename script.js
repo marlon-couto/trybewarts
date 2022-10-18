@@ -39,7 +39,6 @@ const createFormData = (data) => {
   main.appendChild(document.createElement('div'));
   document.querySelector('main div').id = 'form-data';
   const formData = document.querySelector('#form-data');
-  formData.style.width;
   for (let index = 0; index < data.length; index += 1) {
     formData.appendChild(document.createElement('p'));
     formData.lastChild.innerText = data[index];
@@ -47,19 +46,15 @@ const createFormData = (data) => {
 };
 
 sendButton.addEventListener('click', () => {
-  const checkedSubjects = document.querySelectorAll('.subject:checked');
+  const checked = document.querySelectorAll('.subject:checked');
   let subjects = '';
-  for (let index = 0; index < checkedSubjects.length; index += 1) {
-    if (index === checkedSubjects.length - 1) {
-      subjects += `${checkedSubjects[index].value}.`;
-    } else {
-      subjects += `${checkedSubjects[index].value}, `;
-    }
+  for (let index = 0; index < checked.length; index += 1) {
+    subjects += index === checked.length - 1 ? `${checked[index].value}.`
+      : `${checked[index].value}, `;
   }
   const data = [
     `Nome: ${document.querySelector('#input-name').value} ${
-      document.querySelector('#input-lastname').value
-    }`,
+      document.querySelector('#input-lastname').value}`,
     `Email: ${document.querySelector('#input-email').value}`,
     `Casa: ${document.querySelector('#house').value}`,
     `Família: ${document.querySelector('input[name="family"]:checked').value}`,
